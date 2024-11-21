@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Activity 43</title>
+<h1>Basic Html </h1>
+
+<h1>Header1</h1>
+<h2>Header2</h2>
+<h3>Header3</h3>
+<h4>Header4</h4>
+<h5>Header5</h5>
+
+<p>Basic HTML Elements.</p>
+
+<h2>UNORDERED LIST</h2>
+<ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+</ul>
+<h2>ORDERED LIST</h2>
+<ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+<ol>       
+<br>
+
+
+
+<style>
+    table, th,td {
+        border: 1px solid black ;
+        border-collapse: collapse;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px;
+    }
+</style>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin-top: 20px;
+        text-align: center;
+    }
+    td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+    }
+    tr:nth-child(odd) td {
+        background-color:  #808080  ;
+    }
+    tr:nth-child(even) td {
+        background-color: #fff;
+    }
+    tr:hover td {
+        background-color: #808080;
+    }
+</style>
+
+<table style="width: 100;">
+    <tr>
+        <td>First Name</td>
+        <td>Middle Name</td>
+        <td>Last Name</td>
+    </tr>
+    <tr>
+        <td>ELIJAH</td>
+        <td>RASQUERO</td>
+        <td>MADONNA</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td></td>
+    </tr>
+</table>
+
+<br>
+<form action="index.html">
+<label for="fname">"First Name": </label><br>
+<input type ="text" id="fname" name="fname" value=>
+<br>
+
+<label for="Lname">"Last Name"</label><br>
+<input type="text" id="Lname" name="Lname" value=>
+<br>
+
+<label for ="button"> </label> <br>
+<input type="submit" value="submit">
+<form>
+<br>
+    
+
+<h2> DIV IMAGES </h2>
+<div class = "Sample">
+    <a target="_blank" href="url-link of image">
+    <img src ="doffy.jpg" alt= "Sample" width="600" height="400">
+    </a>
+</div>
+<br>
+
+
+<h2> DIV CANVAS </h2>
+<canvas id="myCanvas" width="300" height="200" style="border:2px solid black;">
+</canvas>
+
+<h2> DIV VIDEO</h2>
+<video width="400" height="300" controls autoplay >
+    <source src="Garp.mp4" type="video/mp4">
+    
+</video>
+    
+
+<br>
+<h3> YOUTUBE </h3>
+    <iframe width="420" height="230" 
+            src="https://www.youtube.com/embed/7O6yNoOkJIY" >
+    </iframe>
+
+<h2> DIV DRAG AND DROP</h2>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="url-image-link" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<h5> Source:W3schools.com</h5>
+<a href="https://www.w3schools.com/html/html5_draganddrop.asp">Source Link</a>
+</body>
+</html> 
